@@ -1,0 +1,16 @@
+@import "./partials/_mixins.scss";
+@import "./partials/partial";
+
+body {
+  margin: 0;
+  font-family: "RobotoCondensed";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  color: $black;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

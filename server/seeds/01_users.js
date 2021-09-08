@@ -1,22 +1,26 @@
+const bcrypt = require("bcrypt");
+const password = "hello";
+const hash = bcrypt.hashSync(password, 10);
+
 const userData = [
   {
     id: 1,
     username: "Katsu",
-    password: "hello",
+    password: hash,
     biography:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum!",
   },
   {
     id: 2,
     username: "Nathan",
-    password: "hello",
+    password: hash,
     biography:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum!",
   },
   {
     id: 3,
     username: "Stacy",
-    password: "hello",
+    password: hash,
     biography:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum!",
   },

@@ -1,0 +1,64 @@
+@import "../../partials/fonts";
+@import "../../partials/mixins";
+@import "../../partials/partial";
+
+.header {
+  background: $black;
+  width: 100%;
+  height: $headerHeight;
+  padding: 0 1.5rem;
+  @include breakpoint(md) {
+    padding: 0 3rem;
+  }
+  transition: 0.3s ease all;
+  &__content {
+    overflow: hidden;
+    color: $white;
+    margin: 0 auto;
+    max-width: 120rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 100;
+
+    &__logo {
+      font-size: 2rem;
+      font-weight: $bold;
+      text-decoration: none;
+      color: $light;
+    }
+
+    &__nav {
+      top: 0;
+      right: 100%;
+      bottom: 0;
+      height: 100vh;
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: rgba($black, 0.9);
+      backdrop-filter: blur(2px);
+      transform: translate(0);
+      transition: 0.3s ease transform;
+
+      @include breakpoint(md) {
+        transform: none;
+        flex-direction: row;
+        background: transparent;
+        width: auto;
+        height: 100%;
+        position: static;
+      }
+
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}

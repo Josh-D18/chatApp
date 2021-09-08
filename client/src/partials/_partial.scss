@@ -1,0 +1,50 @@
+// Variables
+
+// --Primary Colors
+$black: #323232;
+$silver: #afafaf;
+$white: #ffffff;
+$blue: #7df9ff;
+$bg: rgb(244, 244, 255);
+
+// --Secondary Colors
+$darkblack: #000000;
+$mercury: #e1e1e1;
+$alabaster: #fafafa;
+
+// spacing
+$spacing-md: 1rem;
+$spacing-lg: 2rem;
+
+// border radius
+$borderRadius: 0.75rem;
+
+// header height
+$headerHeight: 6.25rem;
+
+// --Text Styles
+$pageheader: 3.75rem;
+$sectionHeader: 2.25rem;
+$subHeader: 1.5rem;
+$bodyCopy: 0.875rem;
+$footerCopy: 0.875rem;
+$labelsAndButtons: 0.75rem;
+
+// --Text Styles(Mobile)
+$pageheaderMobile: 1.5rem;
+$sectionHeaderMobile: 1.5rem;
+$subHeaderMobile: 0.875rem;
+$bodyCopyMobile: 0.8125rem;
+$footerCopyMobile: 0.8125rem;
+$labelsAndButtonsMobile: 0.625rem;
+
+// --FontWeight
+$light: 100;
+$regular: 400;
+$demi: 600;
+$bold: 700;
+
+// --Breakpoint
+$media-desktop: "only screen and (width : 1440px)";
+$media-tablet: "only screen and (min-width : 768px)";
+$media-mobile: "only screen and (min-width : 320px)";

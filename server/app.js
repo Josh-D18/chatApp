@@ -1,15 +1,19 @@
 const express = require("express");
 const morgan = require("morgan");
 
-const app = express(); //Create new instance
+const app = express();
 
-const PORT = process.env.PORT || 5000; //Declare the port number
+const PORT = process.env.PORT || 5000;
 const userRouter = require("./routes/users");
+const loginRouter = require("./routes/login");
+const registerRouter = require("./routes/register");
 
-app.use(express.json()); //allows us to access request body as req.body
+app.use(express.json());
 app.use(morgan("dev")); //enable incoming request logging in dev mode
 
 app.use("/users", userRouter);
+app.use("/login", loginRouter);
+app.use("/register", registerRouter);
 
 app.listen(PORT, () => {
   console.log("Server started listening on port : ", PORT);

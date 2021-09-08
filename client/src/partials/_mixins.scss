@@ -1,0 +1,35 @@
+@use "./partial";
+@use "./reset";
+
+// Mixins
+@mixin displayFlexCol {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin mobileView {
+  @media #{$media-mobile} {
+    @content;
+  }
+}
+
+@mixin tabletView {
+  @media #{$media-tablet} {
+    @content;
+  }
+}
+
+@mixin desktopView {
+  @media #{$media-desktop} {
+    @content;
+  }
+}
+
+@mixin breakpoint($point) {
+  @if $point == md {
+    // 768px
+    @media (min-width: 48rem) {
+      @content;
+    }
+  }
+}
