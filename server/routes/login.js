@@ -7,10 +7,10 @@ const bcrypt = require("bcrypt");
 
 // Login
 router.post("/", async (req, res) => {
-  let username = req.body.user_name;
+  let username = req.body.username;
   let password = await req.body.password;
 
-  User.where({ user_name: username })
+  User.where({ username: username })
     .fetch()
     .then((user) => {
       const isMatch = bcrypt.compareSync(password, user.attributes.password);

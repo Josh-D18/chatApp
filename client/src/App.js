@@ -6,6 +6,8 @@ import Home from "./components/Home/Home";
 import Friends from "./components/Friends/Friends";
 import Profile from "./components/Profile/Profile";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Login from "./components/Login/Login";
+import Register from "./components/Register/Register";
 
 class App extends Component {
   render() {
@@ -15,9 +17,11 @@ class App extends Component {
           <Header />
           <Switch>
             <Route exact path="/" component={Home} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/register" component={Register} />
             <ProtectedRoute exact path="/chat" />
             <ProtectedRoute exact path="/friends" component={Friends} />
-            <ProtectedRoute exact path="/profile" component={Profile} />
+            <ProtectedRoute exact path="/profile/:id" component={Profile} />
           </Switch>
         </section>
       </div>

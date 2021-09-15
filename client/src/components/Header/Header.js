@@ -65,7 +65,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link to="/profile" onClick={menuToggleHandler}>
+              <Link to="/profile/:id" onClick={menuToggleHandler}>
                 My Profile
               </Link>
             </li>

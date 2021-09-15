@@ -1,0 +1,23 @@
+@import "../../partials/fonts";
+@import "../../partials/mixins";
+@import "../../partials/partial";
+
+.form {
+  height: 88.5vh;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__password {
+  }
+
+  &__username {
+  }
+
+  &__btn {
+  }
+}
