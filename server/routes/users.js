@@ -17,10 +17,24 @@ router.get("/:id", authorize, function (req, res) {
   User.where({ id: req.params.id })
     .fetch()
     .then((user) => {
+      console.log(req.userLoggedInToken, req.decoded);
       res.status(200).json(user);
     })
     .catch(() => res.status(400).json({ message: "Error getting user" }));
 });
+
+// getLoggedInUser
+
+// router.get("/profile", authorize, (req, res) => {
+//   const username = req.body.username;
+//   User.where({ username: username })
+//     .fetch()
+//     .then((user) => {
+//       console.log(req);
+//       res.status(200).json(user);
+//     })
+//     .catch(() => res.status(400).json({ message: "Error getting user" }));
+// });
 
 // edit bio of user
 router.put("/:id", authorize, (req, res) => {

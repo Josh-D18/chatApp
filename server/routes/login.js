@@ -7,7 +7,7 @@ const bcrypt = require("bcrypt");
 
 // Login
 router.post("/", async (req, res) => {
-  let username = req.body.username;
+  let username = await req.body.username;
   let password = await req.body.password;
 
   User.where({ username: username })
@@ -22,7 +22,9 @@ router.post("/", async (req, res) => {
         process.env.JWT_SECRET,
         { expiresIn: "4h" }
       );
-      res.status(200).json({ user, token });
+      const userLoggedIn = { ...user, userLoggedInName: username };
+      req.userLoggedInToken = user;
+      res.status(200).json({ userLoggedIn, token });
     })
     .catch((err) => res.status(400).json({ message: err.message }));
 });

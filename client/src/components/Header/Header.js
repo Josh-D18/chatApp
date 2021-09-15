@@ -11,8 +11,8 @@ const Header = () => {
   // const history = useHistory();
   const [menuOpen, setMenuOpen] = useState(false);
   const [size, setSize] = useState({
-    width: undefined,
-    height: undefined,
+    width: null,
+    height: null,
   });
 
   useEffect(() => {
